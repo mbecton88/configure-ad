@@ -55,30 +55,33 @@ In this lab, we'll set up a basic Active Directory environment in Azure. This is
     * Password: Whatever you want
     * Attach it to "ADLab-VNet" 
     * **Explanation:** This VM will be our client machine.
-    * **Screenshot Hint:** Capture a screenshot of the VM creation "Basics" tab.
+ 
 * **Set DNS Settings:**
     * Go to the "Client-1" VM's "Networking" settings.
     * Click on the network interface.
     * Go to "DNS servers" and set the "Custom" DNS server to the private IP address of "DC-1."
+      ![image](https://github.com/user-attachments/assets/ea7c5406-5aa1-40db-9756-5ad9bc4e0a44)
     * **Explanation:** This tells the client machine to use the domain controller for DNS resolution.
-    * **Screenshot Hint:** Capture a screenshot of the DNS server settings.
+    
 * **Restart Client-1:**
     * Restart "Client-1" from the Azure portal.
 * **Test Connectivity:**
     * Log in to "Client-1" via RDP.
     * Open Command Prompt or PowerShell.
     * Ping "DC-1's" private IP address.
+      ![image](https://github.com/user-attachments/assets/cf2f3090-111c-47ed-8946-ac418ab6514d)
     * **Explanation:** This verifies network connectivity between the client and the domain controller.
-    * **Screenshot Hint:** Capture a screenshot of the successful ping.
+   
 * **Verify DNS Settings:**
     * Open PowerShell and run `ipconfig /all`.
     * Verify that the "DNS Servers" entry shows "DC-1's" private IP address.
+      ![image](https://github.com/user-attachments/assets/a6f74396-f845-4b18-b076-62541a4f3f53)
     * **Explanation:** This confirms that the client is using the domain controller for DNS.
-    * **Screenshot Hint:** Capture a screenshot of the ipconfig /all output.
+    
 
 **3. Finishing Up (and Saving Costs)**
 
-* **Do not delete the VMs.** We'll use them in future labs.
+* **Do not delete the VMs.** We'll use them in future labs if you are following along.
 * **To save costs:**
     * In the Azure portal, "Stop" or "Deallocate" the VMs when you're not using them.
-    * **Explanation:** Stopping the VMs prevents Azure from charging you for compute resources.
+   
